@@ -1,0 +1,42 @@
+.ProductCard {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.ProductCard_img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.ProductCard_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ProductCard_text-wrapper {
+  margin: 1rem;
+}
+
+.ProductCard_title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.ProductCard_interaction-wrapper {
+  margin: 1rem;
+}
+
+.ProductCard_quantity-wrapper {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+}
+
+.ProductCard button {
+  display: block;
+  width: 100%;
+}
