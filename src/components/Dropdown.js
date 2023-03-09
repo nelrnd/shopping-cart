@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import '../styles/Dropdown.css';
 
-const Dropdown = ({ title, items }) => {
+const Dropdown = ({ title, items, handleChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(null);
   const dropdownRef = useRef(null);
@@ -12,6 +12,7 @@ const Dropdown = ({ title, items }) => {
   const handleListItemClick = (value) => {
     setSelected(value);
     closeDropdown();
+    handleChange(value);
   };
 
   useEffect(() => {

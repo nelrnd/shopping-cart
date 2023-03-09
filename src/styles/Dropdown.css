@@ -1,7 +1,5 @@
 .Dropdown {
-  margin: 1rem;
   position: relative;
-  max-width: 175px;
   user-select: none;
 }
 
@@ -11,7 +9,6 @@
 
 .Dropdown_header {
   padding: 12px;
-  margin-bottom: 8px;
   border: 1px solid #bfbfbf;
   border-radius: 4px;
   position: relative;

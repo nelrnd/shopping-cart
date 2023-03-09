@@ -2,14 +2,14 @@ import { useState } from 'react';
 import Dropdown from './Dropdown';
 import '../styles/ProductCard.css';
 
-const ProductCard = ({ title, price, sizes, imageUrl }) => {
+const ProductCard = ({ title, brand, price, sizes, imageUrl }) => {
   const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState('');
+  const [size, setSize] = useState(null);
 
   const incrementQuantity = () => setQuantity(quantity + 1);
   const decrementQuantity = () => setQuantity(quantity - 1);
   const handleQuantityChange = (e) => setQuantity(parseInt(e.target.value));
-  const handleSizeChange = (e) => setSize(e.target.value);
+  const handleSizeChange = (value) => setSize(value);
 
   return (
     <div className="ProductCard">
@@ -18,33 +18,43 @@ const ProductCard = ({ title, price, sizes, imageUrl }) => {
       </div>
 
       <div className="ProductCard_text-wrapper">
-        <h3 className="ProductCard_title">{title}</h3>
+        <h3 className="ProductCard_title">{`${brand} ${title}`}</h3>
         <p className="ProductCard_price">{price}$</p>
       </div>
 
       <div className="ProductCard_interaction-wrapper">
-        <Dropdown items={sizes} />
-        <div className="ProductCard_quantity-wrapper">
-          <button
-            onClick={decrementQuantity}
-            disabled={quantity <= 1 ? true : ''}
-          >
-            -
-          </button>
-          <input
-            type="number"
-            value={quantity}
-            onChange={handleQuantityChange}
-            min="1"
-            max="20"
+        <div className="ProductCard_interaction-row">
+          <Dropdown
+            title="Select size"
+            items={sizes}
+            handleChange={handleSizeChange}
           />
-          <button
-            onClick={incrementQuantity}
-            disabled={quantity >= 20 ? true : ''}
-          >
-            +
-          </button>
+
+          <div className="ProductCard_quantity-wrapper">
+            <button
+              onClick={decrementQuantity}
+              disabled={quantity <= 1 ? true : ''}
+            >
+              -
+            </button>
+
+            <input
+              type="number"
+              value={quantity}
+              onChange={handleQuantityChange}
+              min="1"
+              max="20"
+            />
+
+            <button
+              onClick={incrementQuantity}
+              disabled={quantity >= 20 ? true : ''}
+            >
+              +
+            </button>
+          </div>
         </div>
+
         <button className="main">Add To Cart</button>
       </div>
     </div>

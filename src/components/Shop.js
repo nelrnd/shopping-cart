@@ -22,7 +22,8 @@ const Shop = () => {
         {items.map((item, index) => (
           <ProductCard
             key={index}
-            title={item.brand + ' ' + item.title}
+            title={item.title}
+            brand={item.brand}
             price={item.price}
             sizes={item.sizes}
             imageUrl={item.imageUrl}

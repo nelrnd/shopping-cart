@@ -1,7 +1,6 @@
 .ProductCard {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  overflow: hidden;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -28,22 +27,46 @@
 }
 
 .ProductCard_title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .ProductCard_interaction-wrapper {
   margin: 0 1rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
 }
 
-.ProductCard_quantity-wrapper {
-  margin-bottom: 1rem;
+.ProductCard_interaction-row {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
 }
 
-.ProductCard button {
+.ProductCard_quantity-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ProductCard_quantity-wrapper button {
+  background-color: #f0f0f0;
+  border: 1px solid #bfbfbf;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.ProductCard_quantity-wrapper input {
+  font-size: 16px;
+  text-align: center;
+  min-width: 44px;
+  padding: 12px;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
   display: block;
-  width: 100%;
+  flex: 1;
+}
+
+.ProductCard_interaction-wrapper button.main {
+  grid-column: 1 / span 2;
 }
