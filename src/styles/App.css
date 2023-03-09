@@ -12,6 +12,19 @@
   margin: 1rem;
 }
 
+.page {
+  padding: 0 1.25rem;
+}
+
+.products-display {
+  max-width: 1400px;
+  margin: 2rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
 button,
 .button {
   font-size: 16px;

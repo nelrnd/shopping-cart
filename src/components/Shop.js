@@ -15,10 +15,8 @@ const Shop = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Shop page</h1>
-
-      <div className="grid">
+    <div className="page">
+      <section className="products-display">
         {items.map((item, index) => (
           <ProductCard
             key={index}
@@ -29,7 +27,7 @@ const Shop = () => {
             imageUrl={item.imageUrl}
           />
         ))}
-      </div>
+      </section>
     </div>
   );
 };
