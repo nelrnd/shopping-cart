@@ -6,17 +6,23 @@ const NavBar = () => {
     <div className="NavBar">
       <div className="NavBar_content">
         <div className="NavBar_brand">
-          <div className="NavBar_logo-wrapper">
-            <h1>BRAND NAME</h1>
-          </div>
+          <Link to="/">
+            <div className="NavBar_logo-wrapper">
+              <h1>BRAND NAME</h1>
+            </div>
+          </Link>
         </div>
 
         <ul className="NavBar_links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="NavBar_link">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/shop">Shop</Link>
+            <Link to="/shop" className="NavBar_link">
+              Shop
+            </Link>
           </li>
         </ul>
       </div>

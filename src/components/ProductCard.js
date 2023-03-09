@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import '../styles/ProductCard.css';
 
 const ProductCard = ({ title, imageUrl, price }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const incrementQuantity = () => setQuantity(quantity + 1);
+  const decrementQuantity = () => setQuantity(quantity - 1);
+
   return (
     <div className="ProductCard">
       <div className="ProductCard_img-wrapper">
@@ -14,9 +20,14 @@ const ProductCard = ({ title, imageUrl, price }) => {
 
       <div className="ProductCard_interaction-wrapper">
         <div className="ProductCard_quantity-wrapper">
-          <button>-</button>
-          <input type="number" />
-          <button>+</button>
+          <button
+            onClick={decrementQuantity}
+            disabled={quantity === 1 ? 'true' : ''}
+          >
+            -
+          </button>
+          <input type="number" value={quantity} />
+          <button onClick={incrementQuantity}>+</button>
         </div>
         <button>Add To Cart</button>
       </div>
