@@ -3,72 +3,84 @@
     "title": "DELTA HALF ZIP HOODY",
     "brand": "ARC'TERYX",
     "price": "150",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/6/16-12-2022_BLR_X000005488-002291_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/6/16-12-2022_BLR_X000005488-002291_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "ATOM LT HOODED JACKET",
     "brand": "ARC'TERYX",
     "price": "270",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/6/16-03-2022_SI_24108-FD_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/6/16-03-2022_SI_24108-FD_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "ARC'LOGO EMBLEM TEE",
     "brand": "ARC'TERYX",
     "price": "75",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/7/07-04-2022_EC_29129-BS_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/7/07-04-2022_EC_29129-BS_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "HERITAGE LOOSE PANT",
     "brand": "THE NORTH FACE",
     "price": "120",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-11-2022_TC_NF0A7X2CJK3_m1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-11-2022_TC_NF0A7X2CJK3_m1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "SIMPLE DOME TEE",
     "brand": "THE NORTH FACE",
     "price": "30",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/7/17-02-2023_LL_NF0A2TX5JK3_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/7/17-02-2023_LL_NF0A2TX5JK3_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "KNAPSACK FLEECE JACKET",
     "brand": "THE NORTH FACE",
     "price": "105",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/4/04-01-2023_ll_nf0a7x19jk3_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/4/04-01-2023_ll_nf0a7x19jk3_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "LIFE FLIGHT JACKET",
     "brand": "NIKE",
     "price": "200",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/6/16-01-2023_LL_DX0680-010_m1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/6/16-01-2023_LL_DX0680-010_m1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "SOLO SWOOSH TEE",
     "brand": "NIKE",
     "price": "45",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-01-23-JF_CV0559-100_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-01-23-JF_CV0559-100_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "NRG QUARTER ZIP TOP",
     "brand": "NIKE",
     "price": "100",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/0/30-08-2022_jd_dq5209-010_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/0/30-08-2022_jd_dq5209-010_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "BASIC LONG SLEEVE TEE",
     "brand": "STUSSY",
     "price": "60",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/9/09-11-2022_NS_1994762-WHIT_m1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/9/09-11-2022_NS_1994762-WHIT_m1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "LONG SLEEVE OVERDYED THERMAL",
     "brand": "STUSSY",
     "price": "120",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-02-2023-JA_1140321-BROW_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-02-2023-JA_1140321-BROW_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   },
   {
     "title": "STOCK LOGO SHORT",
     "brand": "STUSSY",
     "price": "120",
-    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-02-2023-jc1600_112286-BA22_1_1.jpg"
+    "imageUrl": "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-02-2023-jc1600_112286-BA22_1_1.jpg",
+    "sizes": ["Small", "Medium", "Large", "X-Large"]
   }
 ]

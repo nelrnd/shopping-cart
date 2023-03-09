@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import '../styles/ProductCard.css';
 
-const ProductCard = ({ title, imageUrl, price }) => {
+const ProductCard = ({ title, price, sizes, imageUrl }) => {
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState('');
 
   const incrementQuantity = () => setQuantity(quantity + 1);
   const decrementQuantity = () => setQuantity(quantity - 1);
+  const handleQuantityChange = (e) => setQuantity(parseInt(e.target.value));
+  const handleSizeChange = (e) => setSize(e.target.value);
 
   return (
     <div className="ProductCard">
@@ -19,17 +22,35 @@ const ProductCard = ({ title, imageUrl, price }) => {
       </div>
 
       <div className="ProductCard_interaction-wrapper">
+        <div className="ProductCard_sizing-wrapper">
+          <select>
+            {sizes.map((size) => (
+              <option value={size}>{size}</option>
+            ))}
+          </select>
+        </div>
         <div className="ProductCard_quantity-wrapper">
           <button
             onClick={decrementQuantity}
-            disabled={quantity === 1 ? 'true' : ''}
+            disabled={quantity <= 1 ? true : ''}
           >
             -
           </button>
-          <input type="number" value={quantity} />
-          <button onClick={incrementQuantity}>+</button>
+          <input
+            type="number"
+            value={quantity}
+            onChange={handleQuantityChange}
+            min="1"
+            max="20"
+          />
+          <button
+            onClick={incrementQuantity}
+            disabled={quantity >= 20 ? true : ''}
+          >
+            +
+          </button>
         </div>
-        <button>Add To Cart</button>
+        <button className="main">Add To Cart</button>
       </div>
     </div>
   );

@@ -11,3 +11,19 @@
   gap: 1rem;
   margin: 1rem;
 }
+
+button.main,
+.button.main {
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.main:hover,
+.button.main:hover {
+  opacity: 0.7;
+}
