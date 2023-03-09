@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Dropdown from './Dropdown';
 import '../styles/ProductCard.css';
 
 const ProductCard = ({ title, price, sizes, imageUrl }) => {
@@ -22,13 +23,7 @@ const ProductCard = ({ title, price, sizes, imageUrl }) => {
       </div>
 
       <div className="ProductCard_interaction-wrapper">
-        <div className="ProductCard_sizing-wrapper">
-          <select>
-            {sizes.map((size) => (
-              <option value={size}>{size}</option>
-            ))}
-          </select>
-        </div>
+        <Dropdown items={sizes} />
         <div className="ProductCard_quantity-wrapper">
           <button
             onClick={decrementQuantity}
