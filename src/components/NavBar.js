@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className="NavBar_brand">
           <Link to="/">
             <div className="NavBar_logo-wrapper">
-              <h1>BRAND NAME</h1>
+              <h1>ASTRYLE</h1>
             </div>
           </Link>
         </div>
