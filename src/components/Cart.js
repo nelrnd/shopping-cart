@@ -1,4 +1,6 @@
+import CartItem from './CartItem';
 import '../styles/Cart.css';
+import CloseIcon from '../assets/close.svg';
 
 const Cart = ({ cart, isOpen, closeCart }) => {
   const itemsNumber = cart.reduce(
@@ -19,20 +21,30 @@ const Cart = ({ cart, isOpen, closeCart }) => {
           <h2>
             My cart <span className="regular">({itemsNumber})</span>
           </h2>
-          <button onClick={closeCart}>Close</button>
+          <button onClick={closeCart}>
+            <img src={CloseIcon} alt="Close Cart" />
+          </button>
         </div>
 
-        <ul className="Cart_list">
+        <div className="Cart_list">
           {cart.map((item, index) => (
-            <li key={index}>{item.title}</li>
+            <CartItem
+              key={index}
+              title={item.title}
+              brand={item.brand}
+              price={item.price}
+              imageUrl={item.imageUrl}
+              size={item.size}
+              quantity={item.quantity}
+            />
           ))}
-        </ul>
+        </div>
 
         <div className="Cart_bottom">
           <div className="Cart_total-pricing">
             <p>Total</p>
             <p>
-              <strong>{totalPrice}</strong>
+              <strong>${totalPrice}</strong>
             </p>
           </div>
 
