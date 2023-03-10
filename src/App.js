@@ -34,7 +34,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <NavBar cart={cart} openCart={openCart} />
-      <Cart cart={cart} isOpen={cartIsOpen} closeCart={closeCart} />
+      <Cart
+        cart={cart}
+        setCart={setCart}
+        isOpen={cartIsOpen}
+        closeCart={closeCart}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop addToCart={addToCart} />} />

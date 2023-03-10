@@ -2,7 +2,7 @@ import CartItem from './CartItem';
 import '../styles/Cart.css';
 import CloseIcon from '../assets/close.svg';
 
-const Cart = ({ cart, isOpen, closeCart }) => {
+const Cart = ({ cart, setCart, isOpen, closeCart }) => {
   const itemsNumber = cart.reduce(
     (total, curr) => total + (curr.quantity || 1),
     0
@@ -36,6 +36,8 @@ const Cart = ({ cart, isOpen, closeCart }) => {
               imageUrl={item.imageUrl}
               size={item.size}
               quantity={item.quantity}
+              cart={cart}
+              setCart={setCart}
             />
           ))}
         </div>
