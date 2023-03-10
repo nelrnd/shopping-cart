@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Dropdown from './Dropdown';
 import '../styles/ProductCard.css';
 
-const ProductCard = ({ title, brand, price, sizes, imageUrl }) => {
+const ProductCard = ({ title, brand, price, sizes, imageUrl, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState(null);
 
@@ -10,6 +10,12 @@ const ProductCard = ({ title, brand, price, sizes, imageUrl }) => {
   const decrementQuantity = () => setQuantity(quantity - 1);
   const handleQuantityChange = (e) => setQuantity(parseInt(e.target.value));
   const handleSizeChange = (value) => setSize(value);
+
+  const handleAddToCartClick = () => {
+    if (!size) return;
+    const item = { title, brand, price, imageUrl, size, quantity };
+    addToCart(item);
+  };
 
   return (
     <div className="ProductCard">
@@ -55,7 +61,9 @@ const ProductCard = ({ title, brand, price, sizes, imageUrl }) => {
           </div>
         </div>
 
-        <button className="main">Add To Cart</button>
+        <button className="main" onClick={handleAddToCartClick}>
+          Add To Cart
+        </button>
       </div>
     </div>
   );

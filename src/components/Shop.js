@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 import catalog from '../catalog.json';
 
-const Shop = () => {
+const Shop = ({ addToCart }) => {
   const [items, setItems] = useState([]);
 
   const loadItems = () => {
@@ -25,6 +25,7 @@ const Shop = () => {
             price={item.price}
             sizes={item.sizes}
             imageUrl={item.imageUrl}
+            addToCart={addToCart}
           />
         ))}
       </section>
