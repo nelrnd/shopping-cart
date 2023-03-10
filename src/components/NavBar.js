@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import NavBarCart from './NavBarCart';
 import '../styles/NavBar.css';
 
-const NavBar = ({ cart }) => {
+const NavBar = ({ cart, openCart }) => {
   return (
     <div className="NavBar">
       <div className="NavBar_content">
@@ -27,7 +27,7 @@ const NavBar = ({ cart }) => {
           </li>
         </ul>
 
-        <NavBarCart cart={cart} />
+        <NavBarCart cart={cart} openCart={openCart} />
       </div>
     </div>
   );

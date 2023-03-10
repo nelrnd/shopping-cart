@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import Cart from './components/Cart';
 import Home from './components/Home';
 import Shop from './components/Shop';
 import './styles/App.css';
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   const addToCart = (newItem) => {
     const cartCopy = [...cart];
@@ -26,9 +28,13 @@ const App = () => {
     }
   };
 
+  const openCart = () => setCartIsOpen(true);
+  const closeCart = () => setCartIsOpen(false);
+
   return (
     <BrowserRouter>
-      <NavBar cart={cart} />
+      <NavBar cart={cart} openCart={openCart} />
+      <Cart cart={cart} isOpen={cartIsOpen} closeCart={closeCart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop addToCart={addToCart} />} />

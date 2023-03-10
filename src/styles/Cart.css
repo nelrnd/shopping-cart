@@ -1,0 +1,40 @@
+.Cart_container {
+  display: none;
+
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Cart_container.open {
+  display: block;
+  border: solid 1px red;
+}
+
+.Cart_background {
+  background-color: black;
+  opacity: 0.2;
+
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Cart {
+  width: min(500px, 100%);
+  height: 100%;
+  padding: 2rem;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}

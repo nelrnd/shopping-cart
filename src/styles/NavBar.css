@@ -31,6 +31,7 @@
 
 .NavBarCart {
   position: relative;
+  cursor: pointer;
 }
 
 .NavBarCart_items-number {

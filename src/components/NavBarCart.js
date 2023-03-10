@@ -1,13 +1,13 @@
 import Icon from '../assets/shopping-bag.svg';
 
-const NavBarCart = ({ cart }) => {
+const NavBarCart = ({ cart, openCart }) => {
   const itemsNumber = cart.reduce(
     (total, curr) => total + (curr.quantity || 1),
     0
   );
 
   return (
-    <div className="NavBarCart">
+    <div className="NavBarCart" onClick={openCart}>
       <div className="NavBarCart_icon-wrapper">
         <img src={Icon} alt="Shopping bag" />
       </div>
