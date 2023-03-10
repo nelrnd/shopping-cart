@@ -27,19 +27,23 @@ const Cart = ({ cart, setCart, isOpen, closeCart }) => {
         </div>
 
         <div className="Cart_list">
-          {cart.map((item, index) => (
-            <CartItem
-              key={index}
-              title={item.title}
-              brand={item.brand}
-              price={item.price}
-              imageUrl={item.imageUrl}
-              size={item.size}
-              quantity={item.quantity}
-              cart={cart}
-              setCart={setCart}
-            />
-          ))}
+          {cart.length > 0 ? (
+            cart.map((item, index) => (
+              <CartItem
+                key={index}
+                title={item.title}
+                brand={item.brand}
+                price={item.price}
+                imageUrl={item.imageUrl}
+                size={item.size}
+                quantity={item.quantity}
+                cart={cart}
+                setCart={setCart}
+              />
+            ))
+          ) : (
+            <p style={{ textAlign: 'center' }}>You cart is empty</p>
+          )}
         </div>
 
         <div className="Cart_bottom">
