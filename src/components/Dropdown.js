@@ -30,7 +30,11 @@ const Dropdown = ({ title, items, handleChange }) => {
   }, [isOpen]);
 
   return (
-    <div className={isOpen ? 'Dropdown open' : 'Dropdown'} ref={dropdownRef}>
+    <div
+      className={isOpen ? 'Dropdown open' : 'Dropdown'}
+      ref={dropdownRef}
+      data-testid="Dropdown"
+    >
       <div className="Dropdown_header" onClick={toggleDropdown}>
         <p className="Dropdown_header-title">{selected || title}</p>
       </div>
