@@ -6,7 +6,7 @@ const Dropdown = ({ title, items, handleChange }) => {
   const [selected, setSelected] = useState(null);
   const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = async () => setIsOpen(!isOpen);
   const closeDropdown = () => setIsOpen(false);
 
   const handleListItemClick = (value) => {

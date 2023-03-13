@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-unnecessary-act */
 import { render, screen, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
@@ -12,7 +13,7 @@ describe('Dropdown', () => {
     expect(screen.getAllByRole('listitem').length).toBe(3);
   });
 
-  it('sould open dropdown when clicking on it', () => {
+  it('sould open dropdown when clicking on it', async () => {
     render(<Dropdown title="Select size" items={items} />);
     const heading = screen.getByText('Select size');
     expect(screen.getByTestId('Dropdown')).not.toHaveClass('open');
