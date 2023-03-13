@@ -34,6 +34,20 @@ const CartItem = ({
     }
   };
 
+  const handleQuantityChange = (e) => {
+    const cartCopy = [...cart];
+    const item = cartCopy.find(
+      (item) =>
+        item.title === title && item.brand === brand && item.price === price
+    );
+    item.quantity = parseInt(e.target.value);
+    if (item.quantity < 1) {
+      removeFromCart();
+    } else {
+      setCart(cartCopy);
+    }
+  };
+
   const removeFromCart = () => {
     const cartCopy = [...cart];
     const itemIndex = cartCopy.findIndex(
@@ -45,7 +59,7 @@ const CartItem = ({
   };
 
   return (
-    <div className="CartItem">
+    <div className="CartItem" data-testid="CartItem">
       <div className="CartItem_img-wrapper">
         <img src={imageUrl} alt={title} />
       </div>
@@ -60,7 +74,13 @@ const CartItem = ({
         <div className="CartItem_quantity-wrapper">
           <button onClick={decrementQuantity}>-</button>
 
-          <input type="number" value={quantity} min="1" max="20" />
+          <input
+            type="number"
+            value={quantity}
+            onChange={handleQuantityChange}
+            min="1"
+            max="20"
+          />
 
           <button
             onClick={incrementQuantity}

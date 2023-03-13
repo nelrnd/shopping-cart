@@ -12,8 +12,6 @@ const Cart = ({ cart, setCart, isOpen, closeCart }) => {
     0
   );
 
-  const handleClick = () => console.log(cart);
-
   return (
     <div className={`Cart_container${isOpen ? ' open' : ''}`}>
       <div className="Cart">
@@ -42,7 +40,7 @@ const Cart = ({ cart, setCart, isOpen, closeCart }) => {
               />
             ))
           ) : (
-            <p style={{ textAlign: 'center' }}>You cart is empty</p>
+            <p style={{ textAlign: 'center' }}>Your cart is empty</p>
           )}
         </div>
 
@@ -54,9 +52,7 @@ const Cart = ({ cart, setCart, isOpen, closeCart }) => {
             </p>
           </div>
 
-          <button className="main" onClick={handleClick}>
-            Checkout
-          </button>
+          <button className="main">Checkout</button>
         </div>
       </div>
 
