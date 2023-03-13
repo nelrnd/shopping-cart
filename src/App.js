@@ -32,7 +32,7 @@ const App = () => {
   const closeCart = () => setCartIsOpen(false);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shopping-cart/">
       <NavBar cart={cart} openCart={openCart} />
       <Cart
         cart={cart}
