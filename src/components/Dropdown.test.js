@@ -1,5 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, screen, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import Dropdown from './Dropdown';
